@@ -4,8 +4,6 @@
 => Giải nén thực mục : yarn install or npm install -- install node_modules
 => yarn start or npm start --
 
-linkweb: https://wonderful-lamarr-666fa3.netlify.app/
-`Don't care text below`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
