@@ -24,6 +24,7 @@ import ShippingCart from "./pages/shipping-cart";
 import { CartItem } from "./components/ModalCart";
 import WishList from "./pages/account/components/WishList";
 import OrderCompleted from "./pages/order-complete/OrderComplete";
+import Admin from "./pages/admin";
 
 const routers = [
   {
@@ -34,6 +35,10 @@ const routers = [
   {
     path: "/coming",
     component: ComingSoon,
+  },
+  {
+    path: "/admin",
+    component: Admin,
   },
   {
     path: "/",
