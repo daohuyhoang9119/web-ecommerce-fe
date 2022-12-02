@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "name": "Đại Học Công Nghệ Thông Tin",
+      "address": "Song Hành, khu phố 6, Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
+      "phone": "0855643245",
+      "store_hours": "10 am - 10 pm EST, 7 days a week",
+      "link_googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.232359634271!2d106.8016140498867!3d10.869923660396443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiDEkEhRRyBUUC5IQ00!5e0!3m2!1svi!2s!4v1620026724935!5m2!1svi!2s"
+    },
+    {
+      "name": "DNA shop",
+      "address": "258 Nam Kỳ Khởi Nghĩa, Phường 8, Quận 3",
+      "phone": "0855643245",
+      "store_hours": "10 am - 10 pm EST, 7 days a week",
+      "link_googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3193843178115!2d106.68529114988621!3d10.786832161914601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2d82dfb88f%3A0xc332735006743f3b!2zMjU4IE5hbSBL4buzIEto4bufaSBOZ2jEqWEsIFBoxrDhu51uZyA4LCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1620027143019!5m2!1svi!2s"
+    },
+    {
+      "name": "CFD shop Vietnam",
+      "address": "Số 11, Phan Kế Bính, Quận 1, TP. Hồ Chí Minh",
+      "phone": "0855643245",
+      "store_hours": "10 am - 10 pm EST, 7 days a week",
+      "link_googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2812048222095!2d106.69713191480093!3d10.78976129231248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528caafa7703d%3A0xd655aeb0c7040512!2zMTEgUGhhbiBL4bq_IELDrW5oLCDEkGEgS2FvLCBRdeG6rW4gMSwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1sen!2s!4v1620030795623!5m2!1sen!2s"
+    },
+    {
+      "name": "Shopee shop",
+      "address": "285 Hẻm 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, Thành phố Hồ Chí Minh",
+      "phone": "0855643245",
+      "store_hours": "10 am - 10 pm EST, 7 days a week",
+      "link_googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.429958657748!2d106.67659684988611!3d10.77834446206904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f27c9410d47%3A0xf02f31e7fb4f80c9!2zMjg1IEjhurttIDI4NSBDw6FjaCBN4bqhbmcgVGjDoW5nIFTDoW0sIFBoxrDhu51uZyAxMiwgUXXhuq1uIDEwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1620027287945!5m2!1svi!2s"
+    }
+  ]
+}
