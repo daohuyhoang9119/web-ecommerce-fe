@@ -9,7 +9,9 @@ import { viewProduct } from "../../../redux/action/product";
 export default function ProductItem(props) {
   let { loading } = useSelector((state) => state.product);
   const dispatch = useDispatch();
-  const { name, images, real_price, rating_average, slug } = props;
+  // const { name, images, real_price, rating_average, slug } = props;
+  const { Title, images, Price, Rating_Average } = props;
+  //Rating_Average,Title,Price,
   let image1 = images?.[0]?.medium_url;
 
   let image2 = images?.[0]?.medium_url;
@@ -36,7 +38,8 @@ export default function ProductItem(props) {
         {/* Image */}
         <div className="card-img">
           {/* Image */}
-          <Link className="card-img-hover" to={`shop/${slug}`}>
+          {/* <Link className="card-img-hover" to={`shop/${slug}`}> */}
+          <Link className="card-img-hover" to={`shop`}>
             {loading === true ? (
               <Skeleton variant="rect" width="100%" height={252} />
             ) : (
@@ -127,7 +130,7 @@ export default function ProductItem(props) {
               {loading === true ? (
                 <Skeleton variant="rect" width="100%" height={20} />
               ) : (
-                <>{name}</>
+                <>{Title}</>
               )}
             </a>
           </div>
@@ -137,7 +140,7 @@ export default function ProductItem(props) {
           ) : (
             <div
               class="rating font-size-sm text-dark"
-              data-value={rating_average + 1}
+              data-value={Rating_Average + 1}
             >
               <div class="rating-item">
                 <i class="fas fa-star"></i>
@@ -161,7 +164,8 @@ export default function ProductItem(props) {
             {loading === true ? (
               <Skeleton variant="rect" width="100%" height={20} />
             ) : (
-              <>{numberWithCommas(real_price)} VND</>
+              // <>{numberWithCommas(real_price)} VND</>
+              <> {Price} VND</>
             )}
           </div>
         </div>

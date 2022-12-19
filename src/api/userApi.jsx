@@ -1,10 +1,10 @@
 import Api from "../core/ClassApi";
 const userApi = {
   login: (data) => {
-    return Api.post("login", data);
+    return Api.post("Auth/login", data);
   },
   register: (data) => {
-    return Api.post("register", data);
+    return Api.post("Auth/register", data);
   },
   updateInfo(data) {
     return Api.token().post("update-profile", data);

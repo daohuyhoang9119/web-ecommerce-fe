@@ -22,6 +22,7 @@ export default function SideBar({ categories }) {
   if (obj.page) {
     delete obj.page;
   }
+  console.log(categories);
 
   return (
     <div className="col-12 col-md-4 col-lg-3">
@@ -41,9 +42,9 @@ export default function SideBar({ categories }) {
             <div className="collapse show" id="categoryCollapse">
               <div className="form-group">
                 <ul className="list-styled mb-0" id="productsNav">
-                  {categories?.map((e) => (
+                  {categories.data?.map((e) => (
                     <li
-                      key={e._id}
+                      key={e.id}
                       className="list-styled-item font-weight-bold"
                     >
                       <Link
@@ -53,7 +54,7 @@ export default function SideBar({ categories }) {
                         })}`}
                         className="list-styled-link"
                       >
-                        {e.title}
+                        {e.category_Name}
                       </Link>
                     </li>
                   ))}

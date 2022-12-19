@@ -55,7 +55,7 @@ export default function NewCus() {
       <div className="card card-lg">
         <div className="card-body">
           {/* Heading */}
-          <h6 className="mb-7">New Customer</h6>
+          <h6 className="mb-7">New Customer? Register</h6>
           {/* Form */}
           <form>
             {registerErr && (

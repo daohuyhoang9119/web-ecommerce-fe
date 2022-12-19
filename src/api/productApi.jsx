@@ -1,10 +1,13 @@
 import Api from "../core/ClassApi";
 const productApi = {
   product: (strUrl) => {
-    return Api.get(`product?${strUrl}`);
+    // return Api.get(`Product?${strUrl}`);
+    return Api.get(`Product/list`);
   },
   category: () => {
-    return Api.get(`categories`);
+    return Api.get(`Category/list`);
+    // https://localhost:7049/api/Category/list
+    //https://localhost:7049/api/Category/list
   },
   productDetail(slug) {
     return Api.get(`product?slug=${slug}`);

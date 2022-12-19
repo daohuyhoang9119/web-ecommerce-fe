@@ -16,7 +16,7 @@ export default function LoginCus({ email, confirmPassword }) {
       rule: {
         username: {
           required: true,
-          pattern: "username",
+          pattern: "email",
         },
         password: {
           required: true,
@@ -25,7 +25,7 @@ export default function LoginCus({ email, confirmPassword }) {
       },
       message: {
         username: {
-          required: "Please fill your username",
+          required: "Please fill your email",
         },
         password: {
           // pattern:
@@ -52,7 +52,7 @@ export default function LoginCus({ email, confirmPassword }) {
       <div className="card card-lg mb-10 mb-md-0">
         <div className="card-body">
           {/* Heading */}
-          <h6 className="mb-7">Returning Customer</h6>
+          <h6 className="mb-7">Login</h6>
           {/* Form */}
           <form>
             <div className="row">

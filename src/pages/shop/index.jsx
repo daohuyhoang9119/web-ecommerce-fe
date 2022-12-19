@@ -55,7 +55,7 @@ export default function Shop() {
     history.push(`${path}?${queryUrl}`);
   }
   let queryObj = convertQueryToObject();
-  let title = categories.find((e) => e.id == queryObj.categories);
+  // let title = categories.find((e) => e.id == queryObj.categories);
   return (
     <>
       <section className="py-11">
@@ -68,7 +68,8 @@ export default function Shop() {
                 <div className="col-12 col-md">
                   {/* Heading */}
                   <h3 className="mb-1">
-                    {title ? title.title : "All Product"}
+                    {/* {title ? title.title : "All Product"} */}
+                    All product
                   </h3>
                   {/* Breadcrumb */}
                   <ol className="breadcrumb mb-md-0 font-size-xs text-gray-400">
@@ -78,7 +79,8 @@ export default function Shop() {
                       </a>
                     </li>
                     <li className="breadcrumb-item active">
-                      {title ? title?.title : "All Product"}
+                      {/* {title ? title?.title : "All Product"} */}
+                      all product
                     </li>
                   </ol>
                 </div>
