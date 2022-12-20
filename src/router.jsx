@@ -25,6 +25,10 @@ import { CartItem } from "./components/ModalCart";
 import WishList from "./pages/account/components/WishList";
 import OrderCompleted from "./pages/order-complete/OrderComplete";
 import Admin from "./pages/admin";
+// import Customers from "./pages/admin/component/manage/customers/Customer";
+// import Admin_orders from "./pages/admin/component/manage/orders/Orders";
+// import Admin_products from "./pages/admin/component/manage/products/Products";
+// import Category from "./pages/admin/component/manage/category/Category";
 
 const routers = [
   {
@@ -36,10 +40,30 @@ const routers = [
     path: "/coming",
     component: ComingSoon,
   },
+  //ADMIN ROUTERS
+  
+  // {
+  //   path: "/admin/customers",
+  //   component: Customers,
+  // },
+  // {
+  //   path: "/admin/orders",
+  //   component: Admin_orders,
+  // },
+  // {
+  //   path: "/admin/category",
+  //   component: Category,
+  // },
+  // {
+  //   path: "/admin/products",
+  //   component: Admin_products,
+  // },
+
   {
     path: "/admin",
     component: Admin,
   },
+ 
   {
     path: "/",
     component: MainLayout,
