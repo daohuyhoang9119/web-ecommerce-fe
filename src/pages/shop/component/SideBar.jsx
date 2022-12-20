@@ -22,7 +22,7 @@ export default function SideBar({ categories }) {
   if (obj.page) {
     delete obj.page;
   }
-  console.log(categories);
+  // console.log(categories);
 
   return (
     <div className="col-12 col-md-4 col-lg-3">

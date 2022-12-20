@@ -9,6 +9,7 @@ import { numberWithCommas } from "../utils/format";
 let $ = window.$;
 export default function ModalCart() {
   const { listCart, num, amount } = useSelector((state) => state.cart);
+  console.log("list cart:", listCart);
   function closeModalCart() {
     document.getElementById("modalShoppingCart").classList.remove("show");
     document.querySelector("body").classList.remove("modal-open");
@@ -89,29 +90,32 @@ export default function ModalCart() {
 
 export function CartItem(props) {
   const dispatch = useDispatch();
+  console.log("data:", props);
 
   return (
     <li className="list-group-item">
       <div className="row align-items-center">
         <div className="col-4">
           {/* Image */}
-          <a href="./product.html">
+          <Link to="/">
             <img
               className="img-fluid"
-              src={props.images[0].medium_url}
+              src={props?.imageUrl_1}
+              // src="https://unsplash.com/photos/SGY0LIfTKZ4"
               alt="..."
             />
-          </a>
+          </Link>
         </div>
         <div className="col-8">
           {/* Title */}
           <p className="font-size-sm font-weight-bold mb-6">
             <a className="text-body" href="./product.html">
-              {props.name}
+              {props.title}
             </a>{" "}
             <br />
             <span className="text-muted">
-              {numberWithCommas(props.real_price)} VND
+              {/* {numberWithCommas(props.real_price)} VND */}
+              {props.price} VND
             </span>
           </p>
           {/*Footer */}

@@ -42,6 +42,7 @@ export default function Shop() {
 
   let history = useHistory();
   let { path } = useRouteMatch();
+  // console.log(product.data);
 
   function sortChange(e) {
     let value = e.target.value;
