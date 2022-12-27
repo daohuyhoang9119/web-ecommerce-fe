@@ -55,7 +55,7 @@ export default function ModalCart() {
           {/* Footer */}
           <div className="modal-footer line-height-fixed font-size-sm bg-light mt-auto">
             <strong>Subtotal</strong>{" "}
-            <strong className="ml-auto">{amount}</strong>
+            <strong className="ml-auto">{numberWithCommas(amount)}</strong>
           </div>
           {/* Buttons */}
           <div className="modal-body">
@@ -110,7 +110,9 @@ export function CartItem(props) {
               {props.name}
             </a>{" "}
             <br />
-            <span className="text-muted">{props.price} VND</span>
+            <span className="text-muted">
+              {numberWithCommas(props.real_price)} VND
+            </span>
           </p>
           {/*Footer */}
           <div className="d-flex align-items-center">

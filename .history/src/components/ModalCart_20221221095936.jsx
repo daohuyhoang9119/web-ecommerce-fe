@@ -110,7 +110,9 @@ export function CartItem(props) {
               {props.name}
             </a>{" "}
             <br />
-            <span className="text-muted">{props.price} VND</span>
+            <span className="text-muted">
+              {numberWithCommas(props.real_price)} VND
+            </span>
           </p>
           {/*Footer */}
           <div className="d-flex align-items-center">

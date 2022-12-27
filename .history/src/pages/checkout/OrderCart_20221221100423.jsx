@@ -20,7 +20,9 @@ export default function OrderCart(props) {
               {props.name}
             </a>{" "}
             <br />
-            <span className="text-muted">{props.price} VND</span>
+            <span className="text-muted">
+              {numberWithCommas(props.real_price)} VND
+            </span>
           </p>
           {/* Text */}
           <div className="font-size-sm text-muted">Color: Brown</div>

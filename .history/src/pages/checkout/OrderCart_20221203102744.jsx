@@ -7,7 +7,7 @@ export default function OrderCart(props) {
           {/* Image */}
           <a href="product.html">
             <img
-              src="https://images.unsplash.com/photo-1671538856783-c0b123a2223f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+              src={props.images[0].medium_url}
               alt="..."
               className="img-fluid"
             />
@@ -20,7 +20,9 @@ export default function OrderCart(props) {
               {props.name}
             </a>{" "}
             <br />
-            <span className="text-muted">{props.price} VND</span>
+            <span className="text-muted">
+              {numberWithCommas(props.real_price)} VND
+            </span>
           </p>
           {/* Text */}
           <div className="font-size-sm text-muted">Color: Brown</div>
