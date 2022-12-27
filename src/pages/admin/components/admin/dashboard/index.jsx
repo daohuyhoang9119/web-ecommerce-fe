@@ -4,6 +4,8 @@ import Moment from 'react-moment';
 import Loader from '../../loader';
 import ReactPaginate from 'react-paginate';
 import { Link } from 'react-router-dom';
+import './dashboard.scss'
+import './dstyle.scss'
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -267,4 +269,3 @@ export default class Home extends Component {
         );
     }
 }
-
