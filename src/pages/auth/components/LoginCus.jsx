@@ -8,13 +8,13 @@ export default function LoginCus({ email, confirmPassword }) {
   const { loginErr } = useSelector((state) => state.user);
   const { form, setForm, onSubmit, inputChange, error } = useFormValidate(
     {
-      username: email || "",
+      email: email || "",
       password: confirmPassword || "",
-      checked: false,
+      // checked: false,
     },
     {
       rule: {
-        username: {
+        email: {
           required: true,
           pattern: "email",
         },
@@ -24,7 +24,7 @@ export default function LoginCus({ email, confirmPassword }) {
         },
       },
       message: {
-        username: {
+        email: {
           required: "Please fill your email",
         },
         password: {
@@ -32,10 +32,6 @@ export default function LoginCus({ email, confirmPassword }) {
           //   "Use 8 or more characters and combine letters, numbers, and symbols",
         },
       },
-      option: {
-        localStorage: "register-info",
-      },
-      checkPass: false,
     }
   );
   function handleSubmit(e) {
@@ -68,18 +64,18 @@ export default function LoginCus({ email, confirmPassword }) {
                     Email Address *
                   </label>
                   <input
-                    name="username"
+                    name="email"
                     className={`form-control form-control-sm ${
-                      error?.username ? "error" : ""
+                      error?.email ? "error" : ""
                     }`}
                     placeholder="Email Address *"
-                    value={form.username}
+                    value={form.email}
                     onChange={inputChange}
                     type="text"
                   />
                   {error ? (
                     <p style={{ marginBottom: 15, color: "#e55d5d" }}>
-                      {error?.username}
+                      {error?.email}
                     </p>
                   ) : (
                     <></>
@@ -111,23 +107,21 @@ export default function LoginCus({ email, confirmPassword }) {
               </div>
               <div className="col-12 col-md">
                 {/* Remember */}
-                <div className="form-group">
+                {/* <div className="form-group">
                   <div className="custom-control custom-checkbox">
                     <input
                       id="loginRemember"
                       name="checked"
                       className="custom-control-input"
                       value={form.checked}
-                      onChange={(e) =>
-                        setForm({ ...form, checked: e.target.checked })
-                      }
+                      onChange={(e) => setForm({ ...form })}
                       type="checkbox"
                     />
                     <label className="custom-control-label" for="loginRemember">
                       Remember me
                     </label>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="col-12 col-md-auto">
                 {/* Link */}

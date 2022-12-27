@@ -6,6 +6,7 @@ import useFormValidate from "../../../core/ReactHook/useFormValidate";
 
 export default function PersonInfo() {
   const { dataUser, loading } = useSelector((state) => state.user);
+  console.log(dataUser);
   let dispatch = useDispatch();
   let yearNow = new Date().getFullYear();
 
@@ -16,12 +17,12 @@ export default function PersonInfo() {
     birthday = dataUser.birthday;
   }
 
-  let [day, month, year] = birthday.split("/");
-  let [date, setDate] = useState({
-    day: day,
-    month: month,
-    year: year,
-  });
+  // let [day, month, year] = birthday.split("/");
+  // let [date, setDate] = useState({
+  //   day: day,
+  //   month: month,
+  //   year: year,
+  // });
   const { form, onSubmit, error, inputChange } = useFormValidate(
     {
       name: dataUser.name,
@@ -53,15 +54,16 @@ export default function PersonInfo() {
   );
   function handleSelect(e) {
     let name = e.target.name;
-    setDate({
-      ...date,
-      [name]: e.target.value,
-    });
+    // setDate({
+    //   ...date,
+    //   [name]: e.target.value,
+    // });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    let send = date.day + "/" + date.month + "/" + date.year;
+    // let send = date.day + "/" + date.month + "/" + date.year;
+    // let send = date.day + "/" + date.month + "/" + date.year;
     let exclude = {};
     if (!form.password) {
       exclude = {
@@ -73,7 +75,7 @@ export default function PersonInfo() {
 
     if (Object.keys(err).length === 0) {
       dispatch(setLoading(true));
-      dispatch(fetchUpdate({ ...form, birthday: send }));
+      // dispatch(fetchUpdate({ ...form, birthday: send }));
     }
   }
 
@@ -188,7 +190,8 @@ export default function PersonInfo() {
                   id="accountDate"
                   onChange={handleSelect}
                   name="day"
-                  value={date.day}
+                  // value={date.day}
+                  value={1}
                 >
                   {[...Array(31)].map((e, i) => (
                     <option onChange={inputChange} value={i + 1} key={i}>
@@ -207,7 +210,8 @@ export default function PersonInfo() {
                   id="accountMonth"
                   name="month"
                   onChange={handleSelect}
-                  value={date.month}
+                  // value={date.month}
+                  value={1}
                 >
                   {[...Array(12)].map((e, i) => (
                     <option onClick={inputChange} value={i + 1} key={i}>
@@ -226,7 +230,8 @@ export default function PersonInfo() {
                   id="accountYear"
                   name="year"
                   onChange={handleSelect}
-                  value={date.year}
+                  // value={date.year}
+                  value={2}
                 >
                   {[...Array(100)].map((e, i) => (
                     <option value={yearNow - i} key={i}>

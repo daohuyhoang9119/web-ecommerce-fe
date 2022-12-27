@@ -96,11 +96,7 @@ export function CartItem(props) {
         <div className="col-4">
           {/* Image */}
           <Link to="/">
-            <img
-              className="img-fluid"
-              src="https://images.unsplash.com/photo-1661956600655-e772b2b97db4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt="..."
-            />
+            <img className="img-fluid" src={props.image_Url} alt="..." />
           </Link>
         </div>
         <div className="col-8">
@@ -127,7 +123,7 @@ export function CartItem(props) {
               <input
                 type="text"
                 className="cartItem-num"
-                value={props.numCart}
+                value={props.quantity}
               />
               <button
                 className="minus"

@@ -10,13 +10,14 @@ import {
 import userApi from "../../api/userApi";
 import productApi from "../../api/productApi";
 import { getPro, actionLoading, getCategory } from "../action/product";
+
 export function* fetchLogin({ payload }) {
   let res = yield call(userApi.login, payload);
   if (res.error) {
     yield put(loginError(res.error));
   } else {
-    localStorage.setItem("tokenUser", JSON.stringify(res.data.token));
-    localStorage.setItem("dataUser", JSON.stringify(res.data));
+    localStorage.setItem("tokenUser", JSON.stringify(res.data.tokenUser));
+    // localStorage.setItem("dataUser", JSON.stringify(res.data));
     localStorage.setItem("localLogin", JSON.stringify(true));
     yield put(login(res.data));
   }

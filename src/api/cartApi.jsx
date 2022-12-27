@@ -7,7 +7,7 @@ const cartApi = {
     return Api.token().post(`ecommerce/v1/cart`, data);
   },
   getCartFromUser: () => {
-    return Api.token().get("ecommerce/v1/cart");
+    return Api.token().get("Cart/list");
   },
   getAllOrder() {
     return Api.token().get("ecommerce/v1/order");

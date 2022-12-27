@@ -10,11 +10,11 @@ export default function ProductItem(props) {
   let { loading } = useSelector((state) => state.product);
   const dispatch = useDispatch();
   // const { name, images, real_price, rating_average, slug } = props;
-  const { Title, images, Price, Rating_Average } = props;
+  const { title, imageUrl_1, imageUrl_2, price, rating_Average } = props;
   //Rating_Average,Title,Price,
-  let image1 = images?.[0]?.medium_url;
+  let image1 = imageUrl_1;
 
-  let image2 = images?.[0]?.medium_url;
+  let image2 = imageUrl_2;
   let tiki = "/img/products/product-7.jpg";
   function handleAddCart() {
     dispatch(addCart({ ...props }));
@@ -38,8 +38,8 @@ export default function ProductItem(props) {
         {/* Image */}
         <div className="card-img">
           {/* Image */}
-          {/* <Link className="card-img-hover" to={`shop/${slug}`}> */}
-          <Link className="card-img-hover" to={`shop`}>
+          <Link className="card-img-hover" to={`shop/${props.id}`}>
+            {/* <Link className="card-img-hover" to={`Product/${slug}`}> */}
             {loading === true ? (
               <Skeleton variant="rect" width="100%" height={252} />
             ) : (
@@ -130,7 +130,7 @@ export default function ProductItem(props) {
               {loading === true ? (
                 <Skeleton variant="rect" width="100%" height={20} />
               ) : (
-                <>{Title}</>
+                <>{title}</>
               )}
             </a>
           </div>
@@ -140,7 +140,7 @@ export default function ProductItem(props) {
           ) : (
             <div
               class="rating font-size-sm text-dark"
-              data-value={Rating_Average + 1}
+              data-value={rating_Average + 1}
             >
               <div class="rating-item">
                 <i class="fas fa-star"></i>
@@ -165,7 +165,7 @@ export default function ProductItem(props) {
               <Skeleton variant="rect" width="100%" height={20} />
             ) : (
               // <>{numberWithCommas(real_price)} VND</>
-              <> {Price} VND</>
+              <> {price} VND</>
             )}
           </div>
         </div>

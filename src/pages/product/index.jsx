@@ -67,12 +67,12 @@ export default function Products() {
         });
       }
     });
-    reviewApi.review(params.slug).then((res) =>
-      setReview({
-        ...review,
-        dataReview: res,
-      })
-    );
+    // reviewApi.review(params.slug).then((res) =>
+    //   setReview({
+    //     ...review,
+    //     dataReview: res,
+    //   })
+    // );
   }, [params.slug]);
 
   useEffect(() => {

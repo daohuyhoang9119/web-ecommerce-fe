@@ -9,23 +9,23 @@ export default function NewCus() {
 
   const { error, inputChange, onSubmit, form } = useFormValidate(
     {
-      firstName: "",
-      lastName: "",
-      username: "",
+      first_Name: "",
+      last_Name: "",
+      email: "",
       password: "",
-      confirmPassword: "",
+      // confirmPassword: "",
     },
     {
       rule: {
-        firstName: {
+        first_Name: {
           required: true,
           pattern: "name",
         },
-        lastName: {
+        last_Name: {
           pattern: "name",
           required: true,
         },
-        username: {
+        email: {
           required: true,
           pattern: "email",
         },
@@ -33,10 +33,10 @@ export default function NewCus() {
           required: true,
           min: 6,
         },
-        confirmPassword: {
-          required: true,
-          match: "password",
-        },
+        // confirmPassword: {
+        //   required: true,
+        //   match: "password",
+        // },
       },
     }
   );
@@ -80,13 +80,13 @@ export default function NewCus() {
                     id="registerFirstName"
                     type="text"
                     placeholder="First Name *"
-                    name="firstName"
-                    value={form.firstName}
+                    name="first_Name"
+                    value={form.first_Name}
                     onChange={inputChange}
                   />
                   {error && (
                     <p style={{ marginBottom: 15, color: "#e55d5d" }}>
-                      {error?.firstName}
+                      {error?.first_Name}
                     </p>
                   )}
                 </div>
@@ -102,13 +102,13 @@ export default function NewCus() {
                     id="registerLastName"
                     type="text"
                     placeholder="Last Name *"
-                    name="lastName"
-                    value={form.lastName}
+                    name="last_Name"
+                    value={form.last_Name}
                     onChange={inputChange}
                   />
                   {error && (
                     <p style={{ marginBottom: 15, color: "#e55d5d" }}>
-                      {error?.lastName}
+                      {error?.last_Name}
                     </p>
                   )}
                 </div>
@@ -124,13 +124,13 @@ export default function NewCus() {
                     id="registerEmail"
                     type="email"
                     placeholder="Email Address *"
-                    name="username"
-                    value={form.username}
+                    name="email"
+                    value={form.email}
                     onChange={inputChange}
                   />
-                  {error?.username && (
+                  {error?.email && (
                     <p style={{ marginBottom: 15, color: "#e55d5d" }}>
-                      {error?.username}
+                      {error?.email}
                     </p>
                   )}
                 </div>
@@ -159,7 +159,7 @@ export default function NewCus() {
               </div>
               <div className="col-12 col-md-6">
                 {/* Password */}
-                <div className="form-group">
+                {/* <div className="form-group">
                   <label className="sr-only" htmlFor="registerPasswordConfirm">
                     Confirm Password *
                   </label>
@@ -177,7 +177,7 @@ export default function NewCus() {
                       {error?.confirmPassword}
                     </p>
                   )}
-                </div>
+                </div> */}
               </div>
               <div className="col-12 col-md-auto">
                 {/* Link */}

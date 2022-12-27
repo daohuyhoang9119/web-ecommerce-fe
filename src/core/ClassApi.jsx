@@ -49,7 +49,7 @@ class Api {
       return response;
     }
     if (response.status === 403) {
-      await this.refreshToken();
+      // await this.refreshToken();
       let { accessToken } = JSON.parse(localStorage.getItem("tokenUser"));
       if (accessToken) {
         options.headers.Authorization = `Bearer ${accessToken}`;

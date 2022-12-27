@@ -8,7 +8,7 @@ export default function BestPick() {
             {/* Preheading */}
             <h6 className="heading-xxs mb-3 text-gray-400">New Collection</h6>
             {/* Heading */}
-            <h2 className="mb-4">Best Picks 2021</h2>
+            <h2 className="mb-4">Best Picks 2022</h2>
             {/* Subheading */}
             <p className="mb-10 text-gray-500">
               Appear, dry there darkness they're seas, dry waters thing fly

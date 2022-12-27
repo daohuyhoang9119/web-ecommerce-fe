@@ -6,11 +6,9 @@ const productApi = {
   },
   category: () => {
     return Api.get(`Category/list`);
-    // https://localhost:7049/api/Category/list
-    //https://localhost:7049/api/Category/list
   },
   productDetail(slug) {
-    return Api.get(`product?slug=${slug}`);
+    return Api.get(`Product/${slug}`);
   },
 
   searchProduct: (slug = "") => {

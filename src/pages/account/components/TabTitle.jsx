@@ -25,9 +25,9 @@ export default function TabTitle() {
           <NavLink
             className="list-group-item list-group-item-action dropright-toggle"
             to={`${url}/wishlist`}
-            data-value="Widhlist"
+            data-value="Wishlist"
           >
-            Widhlist
+            Wishlist
           </NavLink>
           <NavLink
             className="list-group-item list-group-item-action dropright-toggle "

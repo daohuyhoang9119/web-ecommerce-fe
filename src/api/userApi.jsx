@@ -4,7 +4,7 @@ const userApi = {
     return Api.post("Auth/login", data);
   },
   register: (data) => {
-    return Api.post("Auth/register", data);
+    return Api.post("Auth/Register", data);
   },
   updateInfo(data) {
     return Api.token().post("update-profile", data);
