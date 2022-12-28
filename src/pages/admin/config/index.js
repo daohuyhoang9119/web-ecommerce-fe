@@ -14,8 +14,9 @@ const Apis = {
   GetAllStatusOrder: `${API_URL}/api/order/count`,
 
   //category api
+  //https://localhost:7049/api/Category/list
   CreateCategoryList: `${API_URL}/api/category/create`,
-  GetAllCategoryList: `${API_URL}/api/category/main-list`,
+  GetAllCategoryList: `${API_URL}/Category/list`,
   GetUpdateCategoryList: `${API_URL}/api/category/main-list/update`,
 
   //Sub category api

@@ -116,12 +116,13 @@ export default function CheckOut() {
     let err = onSubmit({ exclude });
     if (Object.keys(err).length === 0) {
       console.log(form);
-      // let res = await cartApi.order({ ...form, day: time });
+      console.log(listCart);
+      let res = await cartApi.order({ ...form, day: time });
 
-      // if (res.data) {
-      //   dispatch(clearCart());
-      //   history.push(`/order-complete/${res.data._id}`);
-      // }
+      if (res.data) {
+        dispatch(clearCart());
+        history.push(`/order-complete/${res.data._id}`);
+      }
     }
   }
 

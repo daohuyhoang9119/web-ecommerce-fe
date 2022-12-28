@@ -5,7 +5,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 export default function OrderCompleted() {
   let { lang, t, setLang } = useTranslate();
 
-  let { _id } = useRouteMatch().params;
+  let { id } = useRouteMatch().params;
 
   return (
     <section className="py-12">
@@ -19,7 +19,7 @@ export default function OrderCompleted() {
             {/* Text */}
             <p className="mb-7 text-gray-500">
               {t("Your order")}{" "}
-              <span className="text-body text-decoration-underline">{_id}</span>{" "}
+              <span className="text-body text-decoration-underline">{id}</span>{" "}
               {t(
                 "has been completed. Your order details are shown for your personal accont."
               )}

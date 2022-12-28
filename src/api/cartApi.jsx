@@ -1,11 +1,11 @@
 import Api from "../core/ClassApi";
 const cartApi = {
   order: (data) => {
-    return Api.token().post("ecommerce/v1/order", data);
+    return Api.token().post("Order", data);
   },
   //https://localhost:7049/api/Cart?productId=3&quantity=2
   create: (data) => {
-    return Api.token().post(`/Cart/list`, data);
+    return Api.token().post(`Cart/list`, data);
   },
   getCartFromUser: () => {
     return Api.token().get("Cart/list");
