@@ -1,5 +1,5 @@
 const API_URL =
-  document.domain === "localhost" ? "http://localhost:7049" : "production";
+  document.domain === "localhost" ? "http://localhost:7049/api" : "production";
 
 const Apis = {
   //Authentication api
@@ -31,9 +31,10 @@ const Apis = {
   GetChildDeleteById: `${API_URL}/api/category/child/deleteById`,
   GetAllSubChildCategory: `${API_URL}/api/category/getAllSubChildCategory?subcategoryId=`,
 
+  //'https://localhost:7049/api/Product/list
   //product api
   AddProductList: `${API_URL}/api/product/add`,
-  GetAllProductList: `${API_URL}/api/Product/list`,
+  GetAllProductList: `${API_URL}/Product/list`,
   GetAllProductPhoto: `${API_URL}/api/product/getAllPhoto`,
   GetUpdateProduct: `${API_URL}/api/product/update`,
   GetUploadProductImage: `${API_URL}/api/product/upload-img`,

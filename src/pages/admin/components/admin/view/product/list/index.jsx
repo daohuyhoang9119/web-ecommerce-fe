@@ -48,16 +48,14 @@ export default class List extends Component {
   async getProductList() {
     this.setState({ isloaded: false });
     let list = await GetProductDetails.getAllProductList();
+    console.log("list", list);
+
     if (list) {
-      var tdata = list.Data;
-      var slice = tdata.slice(
-        this.state.offset,
-        this.state.offset + this.state.perPage
-      );
+      var tdata = list.data;
       this.setState({
-        pageCount: Math.ceil(tdata.length / this.state.perPage),
-        orgtableData: tdata,
-        getList: slice,
+        // pageCount: Math.ceil(tdata.length / this.state.perPage),
+        // orgtableData: tdata,
+        getList: tdata,
         isloaded: true,
       });
     }
@@ -134,6 +132,7 @@ export default class List extends Component {
   //end pagination
   render() {
     const { getList, selectedProduct, isloaded } = this.state;
+    console.log("getlist", getList);
     return (
       <div className="container-fluid">
         <div className="row">
@@ -198,45 +197,33 @@ export default class List extends Component {
                         <th style={{ width: 60 }}>Id</th>
                         <th style={{ width: 100 }}>Image</th>
                         <th>Name</th>
-                        <th>Category</th>
+                        <th>Category Id</th>
                         <th>Brand</th>
-                        <th>Unit</th>
-                        <th>BuyerPrice</th>
-                        <th>Seller Price</th>
+                        <th>Price</th>
                         {/* <th>Qty</th>
                                                 <th>Discount(%)</th> */}
                         <th>Discount</th>
-                        <th>Total</th>
-                        <th>Net Price</th>
                         <th>Status</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       {isloaded
-                        ? getList.map((row, index) => (
+                        ? getList.data.map((row, index) => (
                             <tr key={index}>
                               <td>{row.id}</td>
                               <td>
                                 <div className="cate-img-5">
-                                  <img src={row.photo} alt="product-name" />
+                                  <img src={row.imageUr_l} alt="product-name" />
                                 </div>
                               </td>
-                              <td>{row.name}</td>
-                              <td>
-                                {row.SubCategory
-                                  ? row.SubCategory.category.name
-                                  : ".."}
-                              </td>
-                              <td>{row.brand}</td>
-                              <td>{row.unitSize}</td>
-                              <td>&#x20B9;{row.buyerPrice}</td>
+                              <td>{row.title}</td>
+                              <td>{row.category_Id}</td>
+                              <td>{row.brand_Name}</td>
                               <td>&#x20B9;{row.price}</td>
                               {/* <td>&#x20B9;{row.qty}</td>
                                                         <td>{row.discountPer}%</td> */}
                               <td>&#x20B9;{row.discount}</td>
-                              <td>&#x20B9;{row.total}</td>
-                              <td>&#x20B9;{row.netPrice}</td>
                               <td>
                                 {row.status === "active" ? (
                                   <span className="badge-item badge-status-success">

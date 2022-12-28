@@ -17,12 +17,8 @@ const addProductList = async (data, config) => {
 };
 const getAllProductList = async () => {
   try {
-    let result = await api.get(Apis.GetAllProductList);
-    if (result.Data.error) {
-      NotificationManager.error(result.Data.error);
-      return null;
-    }
-    return result.Data;
+    let result = await api.get("https://localhost:7049/api/Product/list");
+    return result;
   } catch (error) {
     console.log(error);
     return null;

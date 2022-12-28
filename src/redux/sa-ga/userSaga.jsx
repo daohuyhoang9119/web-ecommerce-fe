@@ -13,10 +13,11 @@ import { getPro, actionLoading, getCategory } from "../action/product";
 
 export function* fetchLogin({ payload }) {
   let res = yield call(userApi.login, payload);
+  console.log("rés login:", res);
   if (res.error) {
     yield put(loginError(res.error));
   } else {
-    localStorage.setItem("tokenUser", JSON.stringify(res.data.tokenUser));
+    localStorage.setItem("tokenUser", JSON.stringify(res.tokenUser));
     // localStorage.setItem("dataUser", JSON.stringify(res.data));
     localStorage.setItem("localLogin", JSON.stringify(true));
     yield put(login(res.data));

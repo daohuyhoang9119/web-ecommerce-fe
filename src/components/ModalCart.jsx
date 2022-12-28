@@ -9,7 +9,7 @@ import { numberWithCommas } from "../utils/format";
 let $ = window.$;
 export default function ModalCart() {
   const { listCart, num, amount } = useSelector((state) => state.cart);
-  console.log(listCart);
+  console.log("listcart:", listCart);
   console.log("num cart:", num);
   console.log("amount cart:", amount);
   function closeModalCart() {
@@ -107,7 +107,7 @@ export function CartItem(props) {
           {/* Title */}
           <p className="font-size-sm font-weight-bold mb-6">
             <a className="text-body" href="./product.html">
-              {props.name}
+              {props.title}
             </a>{" "}
             <br />
             <span className="text-muted">{props.price} VND</span>
@@ -127,7 +127,7 @@ export function CartItem(props) {
               <input
                 type="text"
                 className="cartItem-num"
-                value={props.quantity}
+                value={props.numCart}
               />
               <button
                 className="minus"
