@@ -52,6 +52,8 @@ export default function Shop() {
     }
     delete queryObj.page;
     let queryUrl = reverse(queryObj);
+    //https://localhost:7049/api/Product?OrderBy=priceDesc
+    console.log(path);
     history.push(`${path}?${queryUrl}`);
   }
   let queryObj = convertQueryToObject();
@@ -93,15 +95,12 @@ export default function Shop() {
                     <option selected={queryUrl.sort === ""} value="">
                       ---Filter---
                     </option>
-                    <option
-                      selected={queryUrl.sort === "real_price.-1"}
-                      value="real_price.-1"
-                    >
+                    <option selected={queryUrl.sort === "price"} value="price">
                       High Price
                     </option>
                     <option
-                      selected={queryUrl.sort === "real_price.1"}
-                      value="real_price.1"
+                      selected={queryUrl.sort === "priceDesc"}
+                      value="priceDesc"
                     >
                       Low Price
                     </option>

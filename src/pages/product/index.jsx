@@ -62,7 +62,7 @@ export default function Products() {
     productApi.productDetail(params.slug).then((res) => {
       if (res.data.length > 0) {
         setState({
-          product: res.data[0],
+          product: res.data,
           loading: false,
         });
       }
@@ -230,7 +230,7 @@ export default function Products() {
                       {/* Rating */}
                       <div
                         className="rating font-size-xs text-dark"
-                        data-value={state.product.rating_average}
+                        data-value={state.product.rating_Average}
                       >
                         <div className="rating-item">
                           <i className="fas fa-star" />
@@ -257,14 +257,14 @@ export default function Products() {
                     </div>
                   </div>
                   {/* Heading */}
-                  <h3 className="mb-2">{state.product.name}</h3>
+                  <h3 className="mb-2">{state.product.title}</h3>
                   {/* Price */}
                   <div className="mb-7">
                     <span className="font-size-lg font-weight-bold text-gray-350 text-decoration-line-through">
                       {numberWithCommas(state.product?.price)} VND
                     </span>
                     <span className="ml-1 font-size-h5 font-weight-bolder text-primary">
-                      {numberWithCommas(state.product?.real_price || " ")} VND
+                      {numberWithCommas(state.product?.price || " ")} VND
                     </span>
                     <span className="font-size-sm ml-1">
                       (

@@ -5,7 +5,7 @@ export default function Brand() {
         <div className="row">
           <div className="col-12 text-center">
             {/* Heading */}
-            <h2 className="mb-3">CFD* SHOP</h2>
+            <h2 className="mb-3">FRAME* SHOP</h2>
             {/* Subheading */}
             <p className="mb-10 font-size-lg text-gray-500">
               Appear, dry there darkness they're seas, dry waters.

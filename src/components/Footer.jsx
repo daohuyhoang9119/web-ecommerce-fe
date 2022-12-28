@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-12 col-md-3">
               {/* Heading */}
-              <h4 className="mb-6 text-white">CFD* SHOP</h4>
+              <h4 className="mb-6 text-white">Frame Shop</h4>
               {/* Social */}
               <ul className="list-unstyled list-inline mb-7 mb-md-0">
                 <li className="list-inline-item">

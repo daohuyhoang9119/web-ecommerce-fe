@@ -17,23 +17,27 @@ let initialValue = {
 export default function cart(state = initialValue, action) {
   switch (action.type) {
     case GET_CART:
+      console.log(state);
       let { listCart, amount, num } = state;
-      const index = listCart.findIndex((e) => e._id === action.payload._id);
+      const index = listCart.findIndex((e) => e.id === action.payload.id);
+      console.log("index:", index);
+      console.log("amount:", index);
+      console.log("num:", index);
       if (index !== -1) {
         action.payload.numCart = action.payload.num || 1;
         listCart[index].numCart =
           listCart[index].numCart + action.payload.numCart;
-        amount = amount + listCart[index].real_price * action.payload.numCart;
+        amount = amount + listCart[index].price * action.payload.quantity;
       } else {
         action.payload.numCart = action.payload.num || 1;
         listCart.push(action.payload);
-        amount = amount + action.payload.real_price * action.payload.numCart;
+        amount = amount + action.payload.price * action.payload.quantity;
       }
       localStorage.setItem("cart", JSON.stringify(listCart));
       localStorage.setItem("amount", JSON.stringify(amount));
       return {
         ...state,
-        num: num + action.payload.numCart,
+        quantity: num + action.payload.numCart,
         listCart,
         amount,
       };

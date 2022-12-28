@@ -18,7 +18,7 @@ export default function Slider() {
           >
             <div className="card-body mt-auto mb-n11 py-8">
               {/* Heading */}
-              <h1 className="mb-0 font-weight-bolder">SmartPhone</h1>
+              <h1 className="mb-0 font-weight-bolder">Apple</h1>
             </div>
             <div className="card-body mt-auto py-8">
               {/* Button */}
@@ -26,7 +26,7 @@ export default function Slider() {
                 className="btn btn-white stretched-link"
                 to="/shop?categories=1789&sort=real_price.-1"
               >
-                Shop SmartPhone <i className="fe fe-arrow-right ml-2" />
+                Shop Apple <i className="fe fe-arrow-right ml-2" />
               </Link>
             </div>
           </div>
@@ -34,7 +34,7 @@ export default function Slider() {
         {/* Card */}
         <div
           className="col-12 col-md-6 col-lg-4 d-flex flex-column bg-cover"
-          style={{ backgroundImage: "url(/img/img2.jpeg)" }}
+          style={{ backgroundImage: "url(/img/img2.webp)" }}
         >
           <div
             className="card bg-dark-5 bg-hover text-white text-center"
@@ -42,7 +42,7 @@ export default function Slider() {
           >
             <div className="card-body mt-auto mb-n11 py-8">
               {/* Heading */}
-              <h1 className="mb-0 font-weight-bolder">Moto</h1>
+              <h1 className="mb-0 font-weight-bolder">Samsung</h1>
             </div>
             <div className="card-body mt-auto py-8">
               {/* Button */}
@@ -50,7 +50,7 @@ export default function Slider() {
                 className="btn btn-white stretched-link"
                 to="/shop?categories=8594&sort=real_price.-1"
               >
-                Shop Moto <i className="fe fe-arrow-right ml-2" />
+                Shop Samsung <i className="fe fe-arrow-right ml-2" />
               </Link>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Slider() {
         {/* Card */}
         <div
           className="col-12 col-md-6 col-lg-4 d-flex flex-column bg-cover"
-          style={{ backgroundImage: "url(/img/img3.jpeg)" }}
+          style={{ backgroundImage: "url(/img/img3.png)" }}
         >
           <div
             className="card bg-dark-5 bg-hover text-white text-center"
@@ -66,7 +66,7 @@ export default function Slider() {
           >
             <div className="card-body mt-auto mb-n11 py-8">
               {/* Heading */}
-              <h1 className="mb-0 font-weight-bolder">Camera</h1>
+              <h1 className="mb-0 font-weight-bolder">Xiaomi</h1>
             </div>
             <div className="card-body mt-auto py-8">
               {/* Button */}
@@ -74,7 +74,7 @@ export default function Slider() {
                 className="btn btn-white stretched-link"
                 to="/shop?categories=1801&sort=real_price.-1"
               >
-                Shop Camera <i className="fe fe-arrow-right ml-2" />
+                Shop Xiaomi <i className="fe fe-arrow-right ml-2" />
               </Link>
             </div>
           </div>

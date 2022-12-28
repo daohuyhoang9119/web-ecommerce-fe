@@ -3,8 +3,9 @@ const cartApi = {
   order: (data) => {
     return Api.token().post("ecommerce/v1/order", data);
   },
+  //https://localhost:7049/api/Cart?productId=3&quantity=2
   create: (data) => {
-    return Api.token().post(`ecommerce/v1/cart`, data);
+    return Api.token().post(`/Cart/list`, data);
   },
   getCartFromUser: () => {
     return Api.token().get("Cart/list");

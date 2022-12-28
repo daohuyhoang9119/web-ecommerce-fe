@@ -9,6 +9,9 @@ import { numberWithCommas } from "../utils/format";
 let $ = window.$;
 export default function ModalCart() {
   const { listCart, num, amount } = useSelector((state) => state.cart);
+  console.log(listCart);
+  console.log("num cart:", num);
+  console.log("amount cart:", amount);
   function closeModalCart() {
     document.getElementById("modalShoppingCart").classList.remove("show");
     document.querySelector("body").classList.remove("modal-open");
@@ -49,7 +52,7 @@ export default function ModalCart() {
                 </Link>
               </div>
             ) : (
-              listCart.map((e) => <CartItem key={e._id} {...e} />)
+              listCart?.map((e) => <CartItem key={e._id} {...e} />)
             )}
           </ul>
           {/* Footer */}
@@ -89,6 +92,7 @@ export default function ModalCart() {
 
 export function CartItem(props) {
   const dispatch = useDispatch();
+  console.log("cartitem", props);
 
   return (
     <li className="list-group-item">
@@ -96,7 +100,7 @@ export function CartItem(props) {
         <div className="col-4">
           {/* Image */}
           <Link to="/">
-            <img className="img-fluid" src={props.image_Url} alt="..." />
+            <img className="img-fluid" src={props.imageUrl_1} alt="..." />
           </Link>
         </div>
         <div className="col-8">
@@ -115,7 +119,7 @@ export function CartItem(props) {
               <button
                 className="plus"
                 onClick={() => {
-                  dispatch(decrease(props._id));
+                  dispatch(decrease(props.id));
                 }}
               >
                 -
@@ -128,7 +132,7 @@ export function CartItem(props) {
               <button
                 className="minus"
                 onClick={() => {
-                  dispatch(increase(props._id));
+                  dispatch(increase(props.id));
                 }}
               >
                 +
@@ -138,7 +142,7 @@ export function CartItem(props) {
             <a
               className="font-size-xs text-gray-400 ml-auto"
               href="#!"
-              onClick={() => dispatch(removeCart(props._id))}
+              onClick={() => dispatch(removeCart(props.id))}
             >
               <i className="fe fe-x" /> Remove
             </a>
